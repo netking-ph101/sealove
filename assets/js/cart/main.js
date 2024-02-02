@@ -45,7 +45,7 @@ simpleCart.bind('beforeAdd', function (item) {
   var newRoomId = item.get('name');
   var newCheckInDateString = item.get('date');
   var newCheckOutDateString = item.get('session');
-  var price = parseFloat(item.get('price'));
+  // var price = parseFloat(item.get('price'));
 
   // Convert date strings to Date objects
   var newCheckInDate = new Date(newCheckInDateString.replace(/-/g, '/'));
@@ -56,7 +56,7 @@ simpleCart.bind('beforeAdd', function (item) {
   newCheckOutDate.setHours(0, 0, 0, 0);
 
   var dateDiffInDays = Math.floor((newCheckOutDate - newCheckInDate) / (1000 * 60 * 60 * 24));
-  item.set('price', price * dateDiffInDays);
+  // item.set('price', price * dateDiffInDays);
 
   if (newCheckInDate - newCheckOutDate === 0) {
       alert('至少要訂１天喔！');

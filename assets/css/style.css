@@ -655,7 +655,7 @@ img.zoom-in {
 }
 .accordion-button{
   background: none;
-  font-size: 1.75rem;
+  font-size: 1rem;
   line-height: 127%;
   color: var(--black-color);
 }
@@ -1207,3 +1207,26 @@ and also iPads specifically.
 
   }
 }
+
+
+/* youtuber等
+   Add this css for responsive embedded videos in your .css file. */
+
+   .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
